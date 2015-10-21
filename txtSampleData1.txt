@@ -1,0 +1,6 @@
+Id	Name	Value
+1	John	438,32
+2	Peter	395,45
+3	Sarah	638,56
+4	Doe	547,98
+5	Ash	389,45
