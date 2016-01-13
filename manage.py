@@ -19,7 +19,7 @@ def copyFile(file):
 
 @app.route("/handleFile", methods=['GET'])
 def handleFile():
-    try:
+      try:
         f = request.args.get('file')
         d = delimiters(request.args.get('delimiter'))
         fields = request.args.get('fields')
