@@ -1,5 +1,7 @@
 from filesHandling import filesHandling
 
+ALLOWED_EXTENSIONS = set(['txt', 'xls', 'xlsx', 'csv', 'raw'])
+
 def delimiters(delimiter):
     deli = ','
     if delimiter == '\\t':
@@ -10,6 +12,7 @@ def delimiters(delimiter):
 
 def handleFiles(filename, delimiter, fieldnames):
     filesHandling(filename, delimiter, fieldnames)
-
-def copyFileToServer(path):
-    shutil.copy(path, LOCALPATH)
+   
+def allowed_file(filename):
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS

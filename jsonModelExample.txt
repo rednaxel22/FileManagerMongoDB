@@ -1,0 +1,49 @@
+{
+  "DataSourceName": "MiDatasource",
+  "FactTableName": "MainTable",
+  "Table": [
+    {
+      "Name": "MainTable",
+      "IsFactTable": "1",
+      "PK": "id",
+      "Columns": [
+        {
+          "name": "id",
+          "type": "number"
+        },
+        {
+          "name": "name",
+          "type": "text"
+        },
+        {
+          "name": "value",
+          "type": "number"
+        }
+      ],
+      "Relation": [
+        {
+          "tableName": "Product",
+          "dimCol": "idProduct",
+          "factCol": "idProduct"
+        },
+        {
+          "tableName": "Country",
+          "dimCol": "idCountry",
+          "factCol": "idCountry"
+        }
+      ],
+      "Data": [
+        {
+          "id": "1",
+          "name": "Jhon",
+          "value": "123"
+        },
+        {
+          "id": "2",
+          "name": "Sarah",
+          "value": "456"
+        }
+      ]
+    }
+  ]
+}
